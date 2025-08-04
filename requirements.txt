@@ -1,0 +1,10 @@
+streamlit
+pandas
+numpy
+torch
+requests
+Pillow
+transformers
+open_clip_torch
+scikit-learn
+matplotlib
