@@ -20,3 +20,5 @@ A key feature of this application is the "Model Comparison Panel," which enables
     * Visualize the similarity scores of the found products for each model using scatter plots and line charts.
     * Display the top-10 similar images found by each model.
     * Show the processing time for each model to evaluate efficiency.
+      
+The code in this repository has been prepared for public use and differs from the original project developed. 
