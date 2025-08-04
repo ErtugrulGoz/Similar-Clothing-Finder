@@ -64,13 +64,13 @@ with tab1:
 
 
         NUMBER_OF_IMAGES_FOR_PAGE = 50
-        toplam_gorsel = len(category_df)
-        sayfa_sayisi = (toplam_gorsel // NUMBER_OF_IMAGES_FOR_PAGE) + 1
+        sum_img = len(category_df)
+        page_number = (sum_img // NUMBER_OF_IMAGES_FOR_PAGE) + 1
 
-        sayfa_numarasi = st.number_input(f"📄 Page", min_value=1, max_value=sayfa_sayisi, value=1, step=1)
-        st.markdown(f"{sayfa_numarasi} / {sayfa_sayisi}")
-        starting_index = (sayfa_numarasi - 1) * NUMBER_OF_IMAGES_FOR_PAGE
-        ending_index = min(starting_index + NUMBER_OF_IMAGES_FOR_PAGE, toplam_gorsel)
+        page_no = st.number_input(f"📄 Page", min_value=1, max_value=page_number, value=1, step=1)
+        st.markdown(f"{page_no} / {page_number}")
+        starting_index = (page_no - 1) * NUMBER_OF_IMAGES_FOR_PAGE
+        ending_index = min(starting_index + NUMBER_OF_IMAGES_FOR_PAGE, sum_img)
 
         img_cols = st.columns(5)
         for local_idx in range(starting_index, ending_index):
@@ -151,4 +151,5 @@ with tab2:
 
         if query_image and image_urls:
             run_comparison_panel(query_image, image_urls, top_n=10, query_row=selected_row, df=df)
+
 
